@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="jo_jMenuFile">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Plik"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JCheckBoxMenuItem" name="jo_jCheckBoxMenuItemSaveActivityHistory">
+              <Properties>
+                <Property name="selected" type="boolean" value="true"/>
+                <Property name="text" type="java.lang.String" value="Zapisz Histori&#x119; Dzia&#x142;a&#x144;"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jo_jMenuItemClose">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Zamknij"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jMenuItemCloseActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
   <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
@@ -51,7 +79,7 @@
                           <Component id="jo_jButtonDivide" min="-2" pref="73" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jButton17" min="-2" pref="73" max="-2" attributes="0"/>
+                          <Component id="jo_jButtonSquareRoot" min="-2" pref="73" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jo_jButtonZero" max="32767" attributes="0"/>
                       </Group>
@@ -147,7 +175,7 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton17" max="32767" attributes="0"/>
+                              <Component id="jo_jButtonSquareRoot" max="32767" attributes="0"/>
                               <Component id="jo_jButtonZero" pref="70" max="32767" attributes="0"/>
                               <Component id="jo_jButtonComma" max="32767" attributes="0"/>
                           </Group>
@@ -168,6 +196,9 @@
             </Property>
             <Property name="horizontalAlignment" type="int" value="4"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jTextFieldCalculationsActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonClear">
           <Properties>
@@ -253,6 +284,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonSevenActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonEight">
           <Properties>
@@ -267,6 +301,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonEightActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonNine">
           <Properties>
@@ -281,6 +318,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonNineActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonMinus">
           <Properties>
@@ -312,6 +352,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonFourActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonFive">
           <Properties>
@@ -343,6 +386,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonSixActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonPlus">
           <Properties>
@@ -374,6 +420,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonOneActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonTwo">
           <Properties>
@@ -388,6 +437,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonTwoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonThree">
           <Properties>
@@ -402,6 +454,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonThreeActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonEquals">
           <Properties>
@@ -420,7 +475,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton17">
+        <Component class="javax.swing.JButton" name="jo_jButtonSquareRoot">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -447,6 +502,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonZeroActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonComma">
           <Properties>

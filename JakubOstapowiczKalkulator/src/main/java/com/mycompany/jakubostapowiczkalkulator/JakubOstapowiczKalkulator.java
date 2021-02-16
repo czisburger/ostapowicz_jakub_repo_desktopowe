@@ -45,14 +45,23 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jButtonTwo = new javax.swing.JButton();
         jo_jButtonThree = new javax.swing.JButton();
         jo_jButtonEquals = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
+        jo_jButtonSquareRoot = new javax.swing.JButton();
         jo_jButtonZero = new javax.swing.JButton();
         jo_jButtonComma = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jo_jMenuFile = new javax.swing.JMenu();
+        jo_jCheckBoxMenuItemSaveActivityHistory = new javax.swing.JCheckBoxMenuItem();
+        jo_jMenuItemClose = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jo_jTextFieldCalculations.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jo_jTextFieldCalculations.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jo_jTextFieldCalculations.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jTextFieldCalculationsActionPerformed(evt);
+            }
+        });
 
         jo_jButtonClear.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonClear.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -87,16 +96,31 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jButtonSeven.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jo_jButtonSeven.setText("7");
         jo_jButtonSeven.setBorder(null);
+        jo_jButtonSeven.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonSevenActionPerformed(evt);
+            }
+        });
 
         jo_jButtonEight.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonEight.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jo_jButtonEight.setText("8");
         jo_jButtonEight.setBorder(null);
+        jo_jButtonEight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonEightActionPerformed(evt);
+            }
+        });
 
         jo_jButtonNine.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonNine.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jo_jButtonNine.setText("9");
         jo_jButtonNine.setBorder(null);
+        jo_jButtonNine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonNineActionPerformed(evt);
+            }
+        });
 
         jo_jButtonMinus.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonMinus.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
@@ -108,6 +132,11 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jButtonFour.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jo_jButtonFour.setText("4");
         jo_jButtonFour.setBorder(null);
+        jo_jButtonFour.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonFourActionPerformed(evt);
+            }
+        });
 
         jo_jButtonFive.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonFive.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -123,6 +152,11 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jButtonSix.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jo_jButtonSix.setText("6");
         jo_jButtonSix.setBorder(null);
+        jo_jButtonSix.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonSixActionPerformed(evt);
+            }
+        });
 
         jo_jButtonPlus.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonPlus.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -134,16 +168,31 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jButtonOne.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jo_jButtonOne.setText("1");
         jo_jButtonOne.setBorder(null);
+        jo_jButtonOne.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonOneActionPerformed(evt);
+            }
+        });
 
         jo_jButtonTwo.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonTwo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jo_jButtonTwo.setText("2");
         jo_jButtonTwo.setBorder(null);
+        jo_jButtonTwo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonTwoActionPerformed(evt);
+            }
+        });
 
         jo_jButtonThree.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonThree.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jo_jButtonThree.setText("3");
         jo_jButtonThree.setBorder(null);
+        jo_jButtonThree.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonThreeActionPerformed(evt);
+            }
+        });
 
         jo_jButtonEquals.setBackground(new java.awt.Color(0, 102, 255));
         jo_jButtonEquals.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -151,15 +200,20 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jButtonEquals.setText("=");
         jo_jButtonEquals.setBorder(null);
 
-        jButton17.setBackground(new java.awt.Color(255, 255, 255));
-        jButton17.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jButton17.setText("√");
-        jButton17.setBorder(null);
+        jo_jButtonSquareRoot.setBackground(new java.awt.Color(255, 255, 255));
+        jo_jButtonSquareRoot.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jo_jButtonSquareRoot.setText("√");
+        jo_jButtonSquareRoot.setBorder(null);
 
         jo_jButtonZero.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonZero.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jo_jButtonZero.setText("0");
         jo_jButtonZero.setBorder(null);
+        jo_jButtonZero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonZeroActionPerformed(evt);
+            }
+        });
 
         jo_jButtonComma.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonComma.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
@@ -181,7 +235,7 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jo_jButtonDivide, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jo_jButtonSquareRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jo_jButtonZero, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -254,13 +308,31 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
                             .addComponent(jo_jButtonThree, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jo_jButtonSquareRoot, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jo_jButtonZero, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
                             .addComponent(jo_jButtonComma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jo_jButtonEquals, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
+
+        jo_jMenuFile.setText("Plik");
+
+        jo_jCheckBoxMenuItemSaveActivityHistory.setSelected(true);
+        jo_jCheckBoxMenuItemSaveActivityHistory.setText("Zapisz Historię Działań");
+        jo_jMenuFile.add(jo_jCheckBoxMenuItemSaveActivityHistory);
+
+        jo_jMenuItemClose.setText("Zamknij");
+        jo_jMenuItemClose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jMenuItemCloseActionPerformed(evt);
+            }
+        });
+        jo_jMenuFile.add(jo_jMenuItemClose);
+
+        jMenuBar1.add(jo_jMenuFile);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -281,8 +353,72 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
     }//GEN-LAST:event_jo_jButtonClearActionPerformed
 
     private void jo_jButtonFiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonFiveActionPerformed
-        // TODO add your handling code here:
+        if(jo_jButtonFive.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+"5");
+        }
     }//GEN-LAST:event_jo_jButtonFiveActionPerformed
+
+    private void jo_jTextFieldCalculationsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jTextFieldCalculationsActionPerformed
+        
+    }//GEN-LAST:event_jo_jTextFieldCalculationsActionPerformed
+
+    private void jo_jButtonZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonZeroActionPerformed
+        if(jo_jButtonZero.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+"0");
+        }
+    }//GEN-LAST:event_jo_jButtonZeroActionPerformed
+
+    private void jo_jButtonOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonOneActionPerformed
+        if(jo_jButtonOne.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+"1");
+        }
+    }//GEN-LAST:event_jo_jButtonOneActionPerformed
+
+    private void jo_jButtonTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonTwoActionPerformed
+        if(jo_jButtonTwo.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+"2");
+        }
+    }//GEN-LAST:event_jo_jButtonTwoActionPerformed
+
+    private void jo_jButtonThreeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonThreeActionPerformed
+        if(jo_jButtonThree.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+"3");
+        }
+    }//GEN-LAST:event_jo_jButtonThreeActionPerformed
+
+    private void jo_jButtonFourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonFourActionPerformed
+        if(jo_jButtonFour.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+"4");
+        }
+    }//GEN-LAST:event_jo_jButtonFourActionPerformed
+
+    private void jo_jButtonSixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonSixActionPerformed
+        if(jo_jButtonSix.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+"6");
+        }
+    }//GEN-LAST:event_jo_jButtonSixActionPerformed
+
+    private void jo_jButtonSevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonSevenActionPerformed
+        if(jo_jButtonSeven.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+"7");
+        }
+    }//GEN-LAST:event_jo_jButtonSevenActionPerformed
+
+    private void jo_jButtonEightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonEightActionPerformed
+        if(jo_jButtonEight.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+"8");
+        }
+    }//GEN-LAST:event_jo_jButtonEightActionPerformed
+
+    private void jo_jButtonNineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonNineActionPerformed
+        if(jo_jButtonNine.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+"9");
+        }
+    }//GEN-LAST:event_jo_jButtonNineActionPerformed
+
+    private void jo_jMenuItemCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jMenuItemCloseActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jo_jMenuItemCloseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -320,7 +456,7 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton17;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jo_jButtonBack;
     private javax.swing.JButton jo_jButtonClear;
@@ -337,9 +473,13 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
     private javax.swing.JButton jo_jButtonPlus;
     private javax.swing.JButton jo_jButtonSeven;
     private javax.swing.JButton jo_jButtonSix;
+    private javax.swing.JButton jo_jButtonSquareRoot;
     private javax.swing.JButton jo_jButtonThree;
     private javax.swing.JButton jo_jButtonTwo;
     private javax.swing.JButton jo_jButtonZero;
+    private javax.swing.JCheckBoxMenuItem jo_jCheckBoxMenuItemSaveActivityHistory;
+    private javax.swing.JMenu jo_jMenuFile;
+    private javax.swing.JMenuItem jo_jMenuItemClose;
     private javax.swing.JTextField jo_jTextFieldCalculations;
     // End of variables declaration//GEN-END:variables
 }
