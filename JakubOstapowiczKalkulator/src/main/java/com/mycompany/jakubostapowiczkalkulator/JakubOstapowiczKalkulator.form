@@ -270,6 +270,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonBackActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonSeven">
           <Properties>
@@ -519,6 +522,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonCommaActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

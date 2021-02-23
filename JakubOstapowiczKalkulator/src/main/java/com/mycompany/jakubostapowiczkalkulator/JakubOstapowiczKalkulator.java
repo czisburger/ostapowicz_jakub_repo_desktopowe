@@ -91,6 +91,11 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jButtonBack.setForeground(new java.awt.Color(0, 102, 255));
         jo_jButtonBack.setText("←");
         jo_jButtonBack.setBorder(null);
+        jo_jButtonBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonBackActionPerformed(evt);
+            }
+        });
 
         jo_jButtonSeven.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonSeven.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -219,6 +224,11 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jButtonComma.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jo_jButtonComma.setText(",");
         jo_jButtonComma.setBorder(null);
+        jo_jButtonComma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonCommaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -419,6 +429,22 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
     private void jo_jMenuItemCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jMenuItemCloseActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jo_jMenuItemCloseActionPerformed
+
+    private void jo_jButtonCommaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonCommaActionPerformed
+        if(jo_jButtonComma.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+",");
+        }
+    }//GEN-LAST:event_jo_jButtonCommaActionPerformed
+
+    private void jo_jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonBackActionPerformed
+        String cofnij = null;
+        if(jo_jTextFieldCalculations.getText().length() > 0){
+            StringBuilder strB = new StringBuilder(jo_jTextFieldCalculations.getText());
+            strB.deleteCharAt(jo_jTextFieldCalculations.getText().length() - 1);
+            cofnij = strB.toString();
+            jo_jTextFieldCalculations.setText(cofnij);
+        }
+    }//GEN-LAST:event_jo_jButtonBackActionPerformed
 
     /**
      * @param args the command line arguments
