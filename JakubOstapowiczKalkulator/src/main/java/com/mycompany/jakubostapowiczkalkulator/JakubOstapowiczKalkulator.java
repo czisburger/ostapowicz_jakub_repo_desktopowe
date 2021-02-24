@@ -79,12 +79,22 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jButtonDivide.setForeground(new java.awt.Color(0, 102, 255));
         jo_jButtonDivide.setText("÷");
         jo_jButtonDivide.setBorder(null);
+        jo_jButtonDivide.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonDivideActionPerformed(evt);
+            }
+        });
 
         jo_jButtonMultiply.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonMultiply.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jo_jButtonMultiply.setForeground(new java.awt.Color(0, 102, 255));
         jo_jButtonMultiply.setText("×");
         jo_jButtonMultiply.setBorder(null);
+        jo_jButtonMultiply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonMultiplyActionPerformed(evt);
+            }
+        });
 
         jo_jButtonBack.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonBack.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -132,6 +142,11 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jButtonMinus.setForeground(new java.awt.Color(0, 102, 255));
         jo_jButtonMinus.setText("-");
         jo_jButtonMinus.setBorder(null);
+        jo_jButtonMinus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonMinusActionPerformed(evt);
+            }
+        });
 
         jo_jButtonFour.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonFour.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -168,6 +183,11 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jButtonPlus.setForeground(new java.awt.Color(0, 102, 255));
         jo_jButtonPlus.setText("+");
         jo_jButtonPlus.setBorder(null);
+        jo_jButtonPlus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonPlusActionPerformed(evt);
+            }
+        });
 
         jo_jButtonOne.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonOne.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -445,6 +465,30 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
             jo_jTextFieldCalculations.setText(cofnij);
         }
     }//GEN-LAST:event_jo_jButtonBackActionPerformed
+
+    private void jo_jButtonDivideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonDivideActionPerformed
+        if(jo_jButtonDivide.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+" / ");
+        }
+    }//GEN-LAST:event_jo_jButtonDivideActionPerformed
+
+    private void jo_jButtonMultiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonMultiplyActionPerformed
+        if(jo_jButtonMultiply.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+" * ");
+        }
+    }//GEN-LAST:event_jo_jButtonMultiplyActionPerformed
+
+    private void jo_jButtonMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonMinusActionPerformed
+        if(jo_jButtonMinus.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+" - ");
+        }
+    }//GEN-LAST:event_jo_jButtonMinusActionPerformed
+
+    private void jo_jButtonPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonPlusActionPerformed
+        if(jo_jButtonPlus.isEnabled()){
+            jo_jTextFieldCalculations.setText(jo_jTextFieldCalculations.getText()+" + ");
+        }
+    }//GEN-LAST:event_jo_jButtonPlusActionPerformed
 
     /**
      * @param args the command line arguments

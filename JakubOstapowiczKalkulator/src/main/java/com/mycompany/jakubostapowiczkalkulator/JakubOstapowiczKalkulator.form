@@ -236,6 +236,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonDivideActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonMultiply">
           <Properties>
@@ -253,6 +256,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonMultiplyActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonBack">
           <Properties>
@@ -341,6 +347,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonMinusActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonFour">
           <Properties>
@@ -409,6 +418,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonPlusActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonOne">
           <Properties>
