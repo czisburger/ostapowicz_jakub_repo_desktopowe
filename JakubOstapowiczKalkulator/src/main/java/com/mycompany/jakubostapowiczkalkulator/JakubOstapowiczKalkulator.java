@@ -5,7 +5,9 @@
  */
 package com.mycompany.jakubostapowiczkalkulator;
 
+import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import javax.swing.JOptionPane;
 
 /**
@@ -522,7 +524,9 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
 
     private void jo_jMenuItemDaysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jMenuItemDaysActionPerformed
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yyyy");
-        JOptionPane.showInputDialog("Wprowadź datę w formacie (dd mm yyyy): ");
+        String data = JOptionPane.showInputDialog("Wprowadź datę w formacie (dd mm yyyy): ");
+        LocalDate ldnow = LocalDate.now();
+        LocalDate ldinput = LocalDate.parse(data, formatter);
     }//GEN-LAST:event_jo_jMenuItemDaysActionPerformed
 
     /**
