@@ -5,6 +5,9 @@
  */
 package com.mycompany.jakubostapowiczkalkulator;
 
+import java.time.format.DateTimeFormatter;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author dell
@@ -374,6 +377,11 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jMenuTools.setText("Narzędzia");
 
         jo_jMenuItemDays.setText("Ile dni pomiędzy datami");
+        jo_jMenuItemDays.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jMenuItemDaysActionPerformed(evt);
+            }
+        });
         jo_jMenuTools.add(jo_jMenuItemDays);
 
         jMenuBar1.add(jo_jMenuTools);
@@ -511,6 +519,11 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         var array = str.split(" + ");
         jo_jTextFieldCalculations.setText(array+"");
     }//GEN-LAST:event_jo_jButtonEqualsActionPerformed
+
+    private void jo_jMenuItemDaysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jMenuItemDaysActionPerformed
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yyyy");
+        JOptionPane.showInputDialog("Wprowadź datę w formacie (dd mm yyyy): ");
+    }//GEN-LAST:event_jo_jMenuItemDaysActionPerformed
 
     /**
      * @param args the command line arguments
