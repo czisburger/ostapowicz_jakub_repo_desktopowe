@@ -25,6 +25,18 @@
             </MenuItem>
           </SubComponents>
         </Menu>
+        <Menu class="javax.swing.JMenu" name="jo_jMenuTools">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Narz&#x119;dzia"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="jo_jMenuItemDays">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Ile dni pomi&#x119;dzy datami"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
       </SubComponents>
     </Menu>
   </NonVisualComponents>
@@ -489,6 +501,9 @@
               <Border info="null"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jButtonEqualsActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jo_jButtonSquareRoot">
           <Properties>

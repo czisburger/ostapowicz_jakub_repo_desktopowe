@@ -14,6 +14,8 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
     /**
      * Creates new form JakubOstapowiczKalkulator
      */
+    
+   
     public JakubOstapowiczKalkulator() {
         initComponents();
     }
@@ -52,6 +54,8 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jMenuFile = new javax.swing.JMenu();
         jo_jCheckBoxMenuItemSaveActivityHistory = new javax.swing.JCheckBoxMenuItem();
         jo_jMenuItemClose = new javax.swing.JMenuItem();
+        jo_jMenuTools = new javax.swing.JMenu();
+        jo_jMenuItemDays = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -224,6 +228,11 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         jo_jButtonEquals.setForeground(new java.awt.Color(255, 255, 255));
         jo_jButtonEquals.setText("=");
         jo_jButtonEquals.setBorder(null);
+        jo_jButtonEquals.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonEqualsActionPerformed(evt);
+            }
+        });
 
         jo_jButtonSquareRoot.setBackground(new java.awt.Color(255, 255, 255));
         jo_jButtonSquareRoot.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
@@ -362,6 +371,13 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
 
         jMenuBar1.add(jo_jMenuFile);
 
+        jo_jMenuTools.setText("Narzędzia");
+
+        jo_jMenuItemDays.setText("Ile dni pomiędzy datami");
+        jo_jMenuTools.add(jo_jMenuItemDays);
+
+        jMenuBar1.add(jo_jMenuTools);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -490,6 +506,12 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jo_jButtonPlusActionPerformed
 
+    private void jo_jButtonEqualsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonEqualsActionPerformed
+        var str = jo_jTextFieldCalculations.getText();
+        var array = str.split(" + ");
+        jo_jTextFieldCalculations.setText(array+"");
+    }//GEN-LAST:event_jo_jButtonEqualsActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -550,6 +572,8 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
     private javax.swing.JCheckBoxMenuItem jo_jCheckBoxMenuItemSaveActivityHistory;
     private javax.swing.JMenu jo_jMenuFile;
     private javax.swing.JMenuItem jo_jMenuItemClose;
+    private javax.swing.JMenuItem jo_jMenuItemDays;
+    private javax.swing.JMenu jo_jMenuTools;
     private javax.swing.JTextField jo_jTextFieldCalculations;
     // End of variables declaration//GEN-END:variables
 }
