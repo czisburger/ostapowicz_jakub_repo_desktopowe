@@ -526,10 +526,12 @@ public class JakubOstapowiczKalkulator extends javax.swing.JFrame {
     private void jo_jMenuItemDaysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jMenuItemDaysActionPerformed
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yyyy");
         String data = JOptionPane.showInputDialog("Wprowadź datę w formacie (dd mm yyyy): ");
-        LocalDate ldnow = LocalDate.now();
-        LocalDate ldinput = LocalDate.parse(data, formatter);
-        long days = ChronoUnit.DAYS.between(ldinput, ldnow);
-        
+        if(data != null && data.length() == 10){
+            LocalDate ldnow = LocalDate.now();
+            LocalDate ldinput = LocalDate.parse(data, formatter);
+            long days = ChronoUnit.DAYS.between(ldinput, ldnow);
+            JOptionPane.showMessageDialog(rootPane, ""+days, "Ilość dni", HEIGHT);
+        }
     }//GEN-LAST:event_jo_jMenuItemDaysActionPerformed
 
     /**
