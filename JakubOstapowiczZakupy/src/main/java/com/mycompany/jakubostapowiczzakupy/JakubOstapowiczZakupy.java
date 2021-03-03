@@ -27,17 +27,161 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jo_jTabbedPaneInsertGroceries = new javax.swing.JTabbedPane();
+        jPanel2 = new javax.swing.JPanel();
+        jo_jLabelGroceries = new javax.swing.JLabel();
+        jo_jTextFieldGroceries = new javax.swing.JTextField();
+        jo_jLabelInsertValue = new javax.swing.JLabel();
+        jo_jTextFieldInsertValue = new javax.swing.JTextField();
+        jo_jLabelGroceriesType = new javax.swing.JLabel();
+        jo_jComboBoxGroceriesType = new javax.swing.JComboBox<>();
+        jo_jLabelPurchaseDate = new javax.swing.JLabel();
+        jo_jTextFieldPurchaseDate = new javax.swing.JTextField();
+        jo_jButtonSave = new javax.swing.JButton();
+        jo_jLabelTodaysGroceries = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jo_jTextAreaTodaysGroceries = new javax.swing.JTextArea();
+        jo_jLabelTodaysExpences = new javax.swing.JLabel();
+        jo_jLabelWeeklyExpences = new javax.swing.JLabel();
+        jo_jTextFieldTodaysExpences = new javax.swing.JTextField();
+        jo_jTextFieldWeeklyExpences = new javax.swing.JTextField();
+        jo_jTabbedPaneGroceriesList = new javax.swing.JTabbedPane();
+        jo_jMenuBarMain = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jo_jLabelGroceries.setText("Wpisz co kupiłeś");
+
+        jo_jLabelInsertValue.setText("Podaj wartość");
+
+        jo_jLabelGroceriesType.setText("Typ zakupionego towaru");
+
+        jo_jComboBoxGroceriesType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jo_jLabelPurchaseDate.setText("Data zakupu");
+
+        jo_jButtonSave.setText("ZAPISZ");
+
+        jo_jLabelTodaysGroceries.setText("Dzisiejsze zakupy");
+
+        jo_jTextAreaTodaysGroceries.setColumns(20);
+        jo_jTextAreaTodaysGroceries.setRows(5);
+        jScrollPane1.setViewportView(jo_jTextAreaTodaysGroceries);
+
+        jo_jLabelTodaysExpences.setText("Wydatki z dzisiaj:");
+
+        jo_jLabelWeeklyExpences.setText("Wydatki z tygodnia:");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jo_jLabelTodaysGroceries)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jo_jButtonSave))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jo_jLabelGroceries, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jo_jTextFieldGroceries, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(26, 26, 26)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jo_jTextFieldInsertValue)
+                                    .addComponent(jo_jLabelInsertValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jo_jLabelGroceriesType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jo_jComboBoxGroceriesType, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jo_jLabelPurchaseDate)
+                                    .addComponent(jo_jTextFieldPurchaseDate, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jo_jLabelTodaysExpences)
+                                    .addComponent(jo_jLabelWeeklyExpences))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jo_jTextFieldTodaysExpences)
+                                    .addComponent(jo_jTextFieldWeeklyExpences))))))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jo_jLabelGroceries)
+                    .addComponent(jo_jLabelInsertValue)
+                    .addComponent(jo_jLabelGroceriesType)
+                    .addComponent(jo_jLabelPurchaseDate))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jo_jTextFieldGroceries, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jo_jTextFieldInsertValue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jo_jComboBoxGroceriesType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jo_jTextFieldPurchaseDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jo_jButtonSave)
+                    .addComponent(jo_jLabelTodaysGroceries))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 391, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jo_jTextFieldTodaysExpences, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jo_jLabelTodaysExpences))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jo_jLabelWeeklyExpences)
+                            .addComponent(jo_jTextFieldWeeklyExpences, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+
+        jo_jTabbedPaneInsertGroceries.addTab("Wprowadź zakupy", jPanel2);
+        jo_jTabbedPaneInsertGroceries.addTab("Lista zakupów", jo_jTabbedPaneGroceriesList);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jo_jTabbedPaneInsertGroceries)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jo_jTabbedPaneInsertGroceries)
+        );
+
+        jMenu1.setText("File");
+        jo_jMenuBarMain.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jo_jMenuBarMain.add(jMenu2);
+
+        setJMenuBar(jo_jMenuBarMain);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -79,5 +223,28 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jo_jButtonSave;
+    private javax.swing.JComboBox<String> jo_jComboBoxGroceriesType;
+    private javax.swing.JLabel jo_jLabelGroceries;
+    private javax.swing.JLabel jo_jLabelGroceriesType;
+    private javax.swing.JLabel jo_jLabelInsertValue;
+    private javax.swing.JLabel jo_jLabelPurchaseDate;
+    private javax.swing.JLabel jo_jLabelTodaysExpences;
+    private javax.swing.JLabel jo_jLabelTodaysGroceries;
+    private javax.swing.JLabel jo_jLabelWeeklyExpences;
+    private javax.swing.JMenuBar jo_jMenuBarMain;
+    private javax.swing.JTabbedPane jo_jTabbedPaneGroceriesList;
+    private javax.swing.JTabbedPane jo_jTabbedPaneInsertGroceries;
+    private javax.swing.JTextArea jo_jTextAreaTodaysGroceries;
+    private javax.swing.JTextField jo_jTextFieldGroceries;
+    private javax.swing.JTextField jo_jTextFieldInsertValue;
+    private javax.swing.JTextField jo_jTextFieldPurchaseDate;
+    private javax.swing.JTextField jo_jTextFieldTodaysExpences;
+    private javax.swing.JTextField jo_jTextFieldWeeklyExpences;
     // End of variables declaration//GEN-END:variables
 }
