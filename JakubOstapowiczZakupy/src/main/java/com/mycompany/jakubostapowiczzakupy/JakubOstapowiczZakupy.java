@@ -5,6 +5,9 @@
  */
 package com.mycompany.jakubostapowiczzakupy;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 /**
  *
  * @author dell
@@ -218,6 +221,50 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new JakubOstapowiczZakupy().setVisible(true);
+            }
+        });
+    }
+    
+    private void addKeyListenerTojo_jTextFieldGroceries(){
+        jo_jTextFieldGroceries.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                if(e.getKeyChar() == KeyEvent.VK_ENTER){
+                    System.out.println("Wprowadzono dane po wciśnięciu ENTERA");
+                    jo_jTextAreaTodaysGroceries.setText(jo_jTextFieldGroceries.getText());
+                }
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                //System.out.println("2 keyPressed "+e.getKeyChar());
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                //System.out.println("3 keyReleased "+e.getKeyChar());
+            }
+        });
+    }
+    
+    private void addKeyListenerTojo_jTextFieldInsertValue(){
+        jo_jTextFieldInsertValue.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char ch = e.getKeyChar();
+                if(ch == '0' || ch == '1' || ch == '2' || ch == '3' || ch == '4' || ch == '5' || ch == '6' || ch == '6' || ch == '7' || ch == '8' || ch == '9'){
+                    System.out.println("Naciśnięto cyfrę"+ch);
+                }
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                
             }
         });
     }
