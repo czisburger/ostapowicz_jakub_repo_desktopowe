@@ -19,6 +19,9 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
      */
     public JakubOstapowiczZakupy() {
         initComponents();
+        addKeyListenerTojo_jTextFieldGroceries();
+        addKeyListenerTojo_jTextFieldInsertValue();
+        addKeyListenerTojo_jTextFieldPurchaseDate();
     }
 
     /**
@@ -252,8 +255,36 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
             @Override
             public void keyTyped(KeyEvent e) {
                 char ch = e.getKeyChar();
-                if(ch == '0' || ch == '1' || ch == '2' || ch == '3' || ch == '4' || ch == '5' || ch == '6' || ch == '6' || ch == '7' || ch == '8' || ch == '9'){
-                    System.out.println("Naciśnięto cyfrę"+ch);
+                if(ch >= '0' && ch <= '9' || ch == KeyEvent.VK_BACK_SPACE){
+                    jo_jTextFieldInsertValue.setEditable(true);
+                    //System.out.println("Naciśnięto cyfrę"+ch);
+                }else{
+                    jo_jTextFieldInsertValue.setEditable(false);
+                }
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                
+            }
+        });
+    }
+    
+    private void addKeyListenerTojo_jTextFieldPurchaseDate(){
+        jo_jTextFieldPurchaseDate.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char ch = e.getKeyChar();
+                if(ch >= '0' && ch <= '9' || ch == '.' || ch == KeyEvent.VK_BACK_SPACE){
+                    jo_jTextFieldPurchaseDate.setEditable(true);
+                    //System.out.println("Naciśnięto cyfrę"+ch);
+                }else{
+                    jo_jTextFieldPurchaseDate.setEditable(false);
                 }
             }
 
