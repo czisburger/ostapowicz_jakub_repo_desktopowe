@@ -70,6 +70,11 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
         jo_jLabelPurchaseDate.setText("Data zakupu");
 
         jo_jButtonSave.setText("ZAPISZ");
+        jo_jButtonSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jButtonSaveActionPerformed(evt);
+            }
+        });
 
         jo_jLabelTodaysGroceries.setText("Dzisiejsze zakupy");
 
@@ -193,6 +198,14 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jo_jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonSaveActionPerformed
+        var dane = jo_jTextFieldGroceries.getText()+" ; "+jo_jTextFieldInsertValue.getText()+" ; "+jo_jTextFieldPurchaseDate.getText();
+        jo_jTextAreaTodaysGroceries.setText(jo_jTextAreaTodaysGroceries.getText()+dane+"\n");
+        jo_jTextFieldGroceries.setText("");
+        jo_jTextFieldInsertValue.setText("");
+        jo_jTextFieldPurchaseDate.setText("");
+    }//GEN-LAST:event_jo_jButtonSaveActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -232,10 +245,17 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
         jo_jTextFieldGroceries.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                if(e.getKeyChar() == KeyEvent.VK_ENTER){
+                char ch = e.getKeyChar();
+                if(ch >= KeyEvent.VK_A && ch <= KeyEvent.VK_Z|| ch == KeyEvent.VK_SPACE || ch == KeyEvent.VK_BACK_SPACE){
+                    jo_jTextFieldInsertValue.setEditable(true);
+                    //System.out.println("Naciśnięto cyfrę"+ch);
+                }else{
+                    jo_jTextFieldInsertValue.setEditable(false);
+                }
+                /*if(e.getKeyChar() == KeyEvent.VK_ENTER){
                     System.out.println("Wprowadzono dane po wciśnięciu ENTERA");
                     jo_jTextAreaTodaysGroceries.setText(jo_jTextFieldGroceries.getText());
-                }
+                }*/
             }
 
             @Override
