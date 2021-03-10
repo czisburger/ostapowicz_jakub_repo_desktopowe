@@ -246,11 +246,11 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
             @Override
             public void keyTyped(KeyEvent e) {
                 char ch = e.getKeyChar();
-                if(ch >= KeyEvent.VK_A && ch <= KeyEvent.VK_Z|| ch == KeyEvent.VK_SPACE || ch == KeyEvent.VK_BACK_SPACE){
-                    jo_jTextFieldInsertValue.setEditable(true);
+                if(ch >= KeyEvent.VK_A && ch <= KeyEvent.VK_Z || ch >= 'a' && ch <= 'z' || ch == KeyEvent.VK_SPACE || ch == KeyEvent.VK_BACK_SPACE){
+                    jo_jTextFieldGroceries.setEditable(true);
                     //System.out.println("Naciśnięto cyfrę"+ch);
                 }else{
-                    jo_jTextFieldInsertValue.setEditable(false);
+                    jo_jTextFieldGroceries.setEditable(false);
                 }
                 /*if(e.getKeyChar() == KeyEvent.VK_ENTER){
                     System.out.println("Wprowadzono dane po wciśnięciu ENTERA");
