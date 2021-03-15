@@ -299,9 +299,13 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
         jo_jTextFieldPurchaseDate.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
+                String temp = jo_jTextFieldPurchaseDate.getText();
                 char ch = e.getKeyChar();
-                if(ch >= '0' && ch <= '9' || ch == '.' || ch == KeyEvent.VK_BACK_SPACE){
+                if( (ch >= '0' && ch <= '9' ||ch == KeyEvent.VK_BACK_SPACE) && temp.length() < 10){
                     jo_jTextFieldPurchaseDate.setEditable(true);
+                    if( (temp.length() == 4 || temp.length() == 7) && ch != KeyEvent.VK_BACK_SPACE){
+                        jo_jTextFieldPurchaseDate.setText(temp+".");
+                    }
                     //System.out.println("Naciśnięto cyfrę"+ch);
                 }else{
                     jo_jTextFieldPurchaseDate.setEditable(false);
