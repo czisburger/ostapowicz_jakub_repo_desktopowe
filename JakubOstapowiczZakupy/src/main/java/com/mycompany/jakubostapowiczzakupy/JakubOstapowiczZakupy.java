@@ -22,6 +22,7 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
         addKeyListenerTojo_jTextFieldGroceries();
         addKeyListenerTojo_jTextFieldInsertValue();
         addKeyListenerTojo_jTextFieldPurchaseDate();
+        addTooltipToElements();
     }
 
     /**
@@ -199,11 +200,12 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jo_jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonSaveActionPerformed
-        var dane = jo_jTextFieldGroceries.getText()+" ; "+jo_jTextFieldInsertValue.getText()+" ; "+jo_jTextFieldPurchaseDate.getText();
+        var dane = jo_jTextFieldGroceries.getText()+" ; "+jo_jTextFieldInsertValue.getText()+" ; "+jo_jComboBoxGroceriesType.getSelectedItem()+" ; "+jo_jTextFieldPurchaseDate.getText();
         jo_jTextAreaTodaysGroceries.setText(jo_jTextAreaTodaysGroceries.getText()+dane+"\n");
         jo_jTextFieldGroceries.setText("");
         jo_jTextFieldInsertValue.setText("");
         jo_jTextFieldPurchaseDate.setText("");
+        jo_jComboBoxGroceriesType.setSelectedItem(1);
     }//GEN-LAST:event_jo_jButtonSaveActionPerformed
 
     /**
@@ -275,12 +277,26 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
             @Override
             public void keyTyped(KeyEvent e) {
                 char ch = e.getKeyChar();
-                if(ch >= '0' && ch <= '9' || ch == KeyEvent.VK_BACK_SPACE){
-                    jo_jTextFieldInsertValue.setEditable(true);
-                    //System.out.println("Naciśnięto cyfrę"+ch);
+                String temp = jo_jTextFieldInsertValue.getText();
+                
+                if(temp.contains(",")){
+                    if(ch >= '0' && ch <= '9' || ch == KeyEvent.VK_BACK_SPACE){
+                        jo_jTextFieldInsertValue.setEditable(true);
+
+                        //System.out.println("Naciśnięto cyfrę"+ch);
+                    }else{
+                        jo_jTextFieldInsertValue.setEditable(false);
+                    }
                 }else{
-                    jo_jTextFieldInsertValue.setEditable(false);
+                    if(ch >= '0' && ch <= '9' || ch == KeyEvent.VK_BACK_SPACE || ch == ','){
+                        jo_jTextFieldInsertValue.setEditable(true);
+
+                        //System.out.println("Naciśnięto cyfrę"+ch);
+                    }else{
+                        jo_jTextFieldInsertValue.setEditable(false);
+                    }
                 }
+                
             }
 
             @Override
@@ -322,6 +338,23 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
                 
             }
         });
+    }
+    
+    private void addTooltipToElements(){
+        jo_jTextFieldGroceries.setToolTipText("<html>"
+                + "<h4><center>Wprowadź zakupiony towar</center></h4>"
+                + "<p>nie używaj polskich znaków</p>"
+                + "</html>");
+        jo_jTextFieldInsertValue.setToolTipText("<html>"
+                + "<h4><center>Wprowadź ilość zakupionego towaru</center></h4>"
+                + "</html>");
+        jo_jComboBoxGroceriesType.setToolTipText("<html>"
+                + "<h4><center>Wybierz typ zakupionego towaru</center></h4>"
+                + "</html>");
+        jo_jTextFieldPurchaseDate.setToolTipText("<html>"
+                + "<h4><center>Wprowadź datę zakupu</center></h4>"
+                + "<p>format daty - rrrr.mm.dd</p>"
+                + "</html>");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
