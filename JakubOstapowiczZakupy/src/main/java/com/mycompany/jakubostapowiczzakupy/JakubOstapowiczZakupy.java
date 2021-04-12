@@ -7,6 +7,8 @@ package com.mycompany.jakubostapowiczzakupy;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  *
@@ -19,6 +21,11 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
      */
     public JakubOstapowiczZakupy() {
         initComponents();
+        
+        //FileUtils fu = new FileUtils();
+        //jo_jTextAreaTodaysGroceries.setText(fu.readFromFile());
+        
+        filljo_jComboBoxGroceriesType();
         addKeyListenerTojo_jTextFieldGroceries();
         addKeyListenerTojo_jTextFieldInsertValue();
         addKeyListenerTojo_jTextFieldPurchaseDate();
@@ -200,12 +207,18 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jo_jButtonSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jButtonSaveActionPerformed
-        var dane = jo_jTextFieldGroceries.getText()+" ; "+jo_jTextFieldInsertValue.getText()+" ; "+jo_jComboBoxGroceriesType.getSelectedItem()+" ; "+jo_jTextFieldPurchaseDate.getText();
-        jo_jTextAreaTodaysGroceries.setText(jo_jTextAreaTodaysGroceries.getText()+dane+"\n");
+        FileUtils stf = new FileUtils();
+        String text = jo_jTextFieldGroceries.getText()+";"+jo_jTextFieldInsertValue.getText()+";"+jo_jComboBoxGroceriesType.getSelectedItem()+";"+jo_jTextFieldPurchaseDate.getText();
+        stf.saveToFile(text);
+        
+        jo_jTextAreaTodaysGroceries.setText(text);
+        
         jo_jTextFieldGroceries.setText("");
         jo_jTextFieldInsertValue.setText("");
         jo_jTextFieldPurchaseDate.setText("");
         jo_jComboBoxGroceriesType.setSelectedItem(1);
+        
+        
     }//GEN-LAST:event_jo_jButtonSaveActionPerformed
 
     /**
@@ -356,7 +369,21 @@ public class JakubOstapowiczZakupy extends javax.swing.JFrame {
                 + "<p>format daty - rrrr.mm.dd</p>"
                 + "</html>");
     }
+    
+    private void filljo_jComboBoxGroceriesType(){
+        ProductTypeUtils ptu = new ProductTypeUtils();
+        jo_jComboBoxGroceriesType.removeAllItems();
+        
+        jo_jComboBoxGroceriesType.addItem("");
+        jo_jComboBoxGroceriesType.addItem("Żywność");
+        jo_jComboBoxGroceriesType.addItem("Napoje");
+        jo_jComboBoxGroceriesType.addItem("Owoce");
+        jo_jComboBoxGroceriesType.addItem("Warzywa");
+    }
 
+    private String file_name = "lista_zakupow.csv";
+    private String product_names = "product_names.csv";
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
