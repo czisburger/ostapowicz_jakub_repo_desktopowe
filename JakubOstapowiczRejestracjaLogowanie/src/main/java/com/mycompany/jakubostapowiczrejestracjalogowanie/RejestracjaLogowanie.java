@@ -27,17 +27,97 @@ public class RejestracjaLogowanie extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jo_jTPMain = new javax.swing.JTabbedPane();
+        jo_jPLogowanie = new javax.swing.JPanel();
+        jo_jLLogowanie = new javax.swing.JLabel();
+        jo_jLLogowanieEmail = new javax.swing.JLabel();
+        jo_jTFLogowanieEmail = new javax.swing.JTextField();
+        jo_jTFLogowaniePassword = new javax.swing.JTextField();
+        jo_jLLogowaniePassword = new javax.swing.JLabel();
+        jo_jBZaloguj = new javax.swing.JButton();
+        jo_jPRejestracja = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jo_jTPMain.setBackground(new java.awt.Color(255, 255, 255));
+
+        jo_jPLogowanie.setBackground(new java.awt.Color(255, 255, 255));
+
+        jo_jLLogowanie.setFont(new java.awt.Font("Tahoma", 0, 15)); // NOI18N
+        jo_jLLogowanie.setText("Logowanie");
+
+        jo_jLLogowanieEmail.setText("Email");
+
+        jo_jTFLogowanieEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+
+        jo_jTFLogowaniePassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+
+        jo_jLLogowaniePassword.setText("Password");
+
+        jo_jBZaloguj.setBackground(new java.awt.Color(255, 255, 255));
+        jo_jBZaloguj.setText("Zaloguj");
+
+        javax.swing.GroupLayout jo_jPLogowanieLayout = new javax.swing.GroupLayout(jo_jPLogowanie);
+        jo_jPLogowanie.setLayout(jo_jPLogowanieLayout);
+        jo_jPLogowanieLayout.setHorizontalGroup(
+            jo_jPLogowanieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jo_jPLogowanieLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jo_jPLogowanieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jo_jLLogowanie, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jo_jLLogowanieEmail)
+                    .addComponent(jo_jTFLogowanieEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jo_jTFLogowaniePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jo_jLLogowaniePassword)
+                    .addComponent(jo_jBZaloguj))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jo_jPLogowanieLayout.setVerticalGroup(
+            jo_jPLogowanieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jo_jPLogowanieLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jo_jLLogowanie, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jo_jLLogowanieEmail)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jo_jTFLogowanieEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jo_jLLogowaniePassword)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jo_jTFLogowaniePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addComponent(jo_jBZaloguj, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jo_jTPMain.addTab("Logowanie", jo_jPLogowanie);
+
+        jo_jPRejestracja.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jo_jPRejestracjaLayout = new javax.swing.GroupLayout(jo_jPRejestracja);
+        jo_jPRejestracja.setLayout(jo_jPRejestracjaLayout);
+        jo_jPRejestracjaLayout.setHorizontalGroup(
+            jo_jPRejestracjaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 370, Short.MAX_VALUE)
+        );
+        jo_jPRejestracjaLayout.setVerticalGroup(
+            jo_jPRejestracjaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 201, Short.MAX_VALUE)
+        );
+
+        jo_jTPMain.addTab("Rejestracja", jo_jPRejestracja);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jo_jTPMain)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jo_jTPMain, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -79,5 +159,14 @@ public class RejestracjaLogowanie extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jo_jBZaloguj;
+    private javax.swing.JLabel jo_jLLogowanie;
+    private javax.swing.JLabel jo_jLLogowanieEmail;
+    private javax.swing.JLabel jo_jLLogowaniePassword;
+    private javax.swing.JPanel jo_jPLogowanie;
+    private javax.swing.JPanel jo_jPRejestracja;
+    private javax.swing.JTextField jo_jTFLogowanieEmail;
+    private javax.swing.JTextField jo_jTFLogowaniePassword;
+    private javax.swing.JTabbedPane jo_jTPMain;
     // End of variables declaration//GEN-END:variables
 }
