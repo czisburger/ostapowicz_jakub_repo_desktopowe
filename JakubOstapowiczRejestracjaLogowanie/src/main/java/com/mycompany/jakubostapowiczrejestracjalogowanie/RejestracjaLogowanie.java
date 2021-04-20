@@ -5,6 +5,9 @@
  */
 package com.mycompany.jakubostapowiczrejestracjalogowanie;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 /**
  *
  * @author dell
@@ -16,6 +19,8 @@ public class RejestracjaLogowanie extends javax.swing.JFrame {
      */
     public RejestracjaLogowanie() {
         initComponents();
+        addKeyListenerTojo_jTFRejestracjaUsername();
+        addKeyListenerTojo_jTFRejestracjaEmail();
     }
 
     /**
@@ -32,20 +37,21 @@ public class RejestracjaLogowanie extends javax.swing.JFrame {
         jo_jLLogowanie = new javax.swing.JLabel();
         jo_jLLogowanieEmail = new javax.swing.JLabel();
         jo_jTFLogowanieEmail = new javax.swing.JTextField();
-        jo_jTFLogowaniePassword = new javax.swing.JTextField();
         jo_jLLogowaniePassword = new javax.swing.JLabel();
         jo_jBZaloguj = new javax.swing.JButton();
+        jo_jPFLogowaniePassword = new javax.swing.JPasswordField();
         jo_jPRejestracja = new javax.swing.JPanel();
         jo_jLRejestracja = new javax.swing.JLabel();
         jo_jLRejestracjaEmail = new javax.swing.JLabel();
         jo_jTFRejestracjaEmail = new javax.swing.JTextField();
-        jo_jTFRejestracjaPassword = new javax.swing.JTextField();
         jo_jLRejestracjaPassword = new javax.swing.JLabel();
         jo_jTFRejestracjaUsername = new javax.swing.JTextField();
         jo_jLRejestracjaUsername = new javax.swing.JLabel();
-        jo_jTFRejestracjaConfirmPassword = new javax.swing.JTextField();
         jo_jLRejestracjaConfirmPassword = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jojBRejestracja = new javax.swing.JButton();
+        jo_jPFRejestracjaPassword = new javax.swing.JPasswordField();
+        jo_jPFRejestracjaConfirmPassword = new javax.swing.JPasswordField();
+        jo_jBRejestracjaWyczysc = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,12 +66,12 @@ public class RejestracjaLogowanie extends javax.swing.JFrame {
 
         jo_jTFLogowanieEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
-        jo_jTFLogowaniePassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-
         jo_jLLogowaniePassword.setText("Password");
 
         jo_jBZaloguj.setBackground(new java.awt.Color(255, 255, 255));
         jo_jBZaloguj.setText("Zaloguj");
+
+        jo_jPFLogowaniePassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         javax.swing.GroupLayout jo_jPLogowanieLayout = new javax.swing.GroupLayout(jo_jPLogowanie);
         jo_jPLogowanie.setLayout(jo_jPLogowanieLayout);
@@ -74,13 +80,16 @@ public class RejestracjaLogowanie extends javax.swing.JFrame {
             .addGroup(jo_jPLogowanieLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jo_jPLogowanieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jo_jLLogowanie, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jo_jLLogowanieEmail)
-                    .addComponent(jo_jTFLogowanieEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jo_jTFLogowaniePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jo_jLLogowaniePassword)
-                    .addComponent(jo_jBZaloguj))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jo_jPLogowanieLayout.createSequentialGroup()
+                        .addGroup(jo_jPLogowanieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jo_jLLogowanie, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jo_jLLogowanieEmail)
+                            .addComponent(jo_jTFLogowanieEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jo_jLLogowaniePassword)
+                            .addComponent(jo_jBZaloguj))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jo_jPFLogowaniePassword))
+                .addContainerGap())
         );
         jo_jPLogowanieLayout.setVerticalGroup(
             jo_jPLogowanieLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -94,7 +103,7 @@ public class RejestracjaLogowanie extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jo_jLLogowaniePassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jo_jTFLogowaniePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jo_jPFLogowaniePassword, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jo_jBZaloguj, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(137, Short.MAX_VALUE))
@@ -111,20 +120,27 @@ public class RejestracjaLogowanie extends javax.swing.JFrame {
 
         jo_jTFRejestracjaEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
-        jo_jTFRejestracjaPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-
         jo_jLRejestracjaPassword.setText("Password");
 
         jo_jTFRejestracjaUsername.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         jo_jLRejestracjaUsername.setText("Username");
 
-        jo_jTFRejestracjaConfirmPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-
         jo_jLRejestracjaConfirmPassword.setText("Confirm Password");
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Rejestracja");
+        jojBRejestracja.setBackground(new java.awt.Color(255, 255, 255));
+        jojBRejestracja.setText("Rejestracja");
+
+        jo_jPFRejestracjaPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+
+        jo_jPFRejestracjaConfirmPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+
+        jo_jBRejestracjaWyczysc.setText("Wyczyść");
+        jo_jBRejestracjaWyczysc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jo_jBRejestracjaWyczyscActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jo_jPRejestracjaLayout = new javax.swing.GroupLayout(jo_jPRejestracja);
         jo_jPRejestracja.setLayout(jo_jPRejestracjaLayout);
@@ -133,24 +149,28 @@ public class RejestracjaLogowanie extends javax.swing.JFrame {
             .addGroup(jo_jPRejestracjaLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jo_jPRejestracjaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jo_jPFRejestracjaPassword)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jo_jPRejestracjaLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jo_jPRejestracjaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jo_jPRejestracjaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jo_jLRejestracjaEmail)
                                 .addComponent(jo_jTFRejestracjaEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jo_jTFRejestracjaPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jo_jLRejestracjaPassword))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jo_jPRejestracjaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jo_jLRejestracjaUsername)
                                 .addComponent(jo_jTFRejestracjaUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jo_jPRejestracjaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jo_jTFRejestracjaConfirmPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jo_jLRejestracjaConfirmPassword))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jo_jPRejestracjaLayout.createSequentialGroup()
+                                .addComponent(jo_jLRejestracjaConfirmPassword)
+                                .addGap(264, 264, 264))))
+                    .addComponent(jo_jPFRejestracjaConfirmPassword)
                     .addGroup(jo_jPRejestracjaLayout.createSequentialGroup()
                         .addGroup(jo_jPRejestracjaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jo_jLRejestracja, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1))
+                            .addGroup(jo_jPRejestracjaLayout.createSequentialGroup()
+                                .addComponent(jojBRejestracja)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jo_jBRejestracjaWyczysc)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -169,14 +189,16 @@ public class RejestracjaLogowanie extends javax.swing.JFrame {
                 .addComponent(jo_jTFRejestracjaEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jo_jLRejestracjaPassword)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jo_jTFRejestracjaPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(4, 4, 4)
+                .addComponent(jo_jPFRejestracjaPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jo_jLRejestracjaConfirmPassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jo_jTFRejestracjaConfirmPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(jo_jPFRejestracjaConfirmPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16)
+                .addGroup(jo_jPRejestracjaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jojBRejestracja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jo_jBRejestracjaWyczysc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -191,12 +213,19 @@ public class RejestracjaLogowanie extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jo_jTPMain, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jo_jTPMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jo_jBRejestracjaWyczyscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jo_jBRejestracjaWyczyscActionPerformed
+        jo_jTFRejestracjaUsername.setText("");
+        jo_jTFRejestracjaEmail.setText("");
+        jo_jPFRejestracjaPassword.setText("");
+        jo_jPFRejestracjaConfirmPassword.setText("");
+    }//GEN-LAST:event_jo_jBRejestracjaWyczyscActionPerformed
 
     /**
      * @param args the command line arguments
@@ -232,9 +261,81 @@ public class RejestracjaLogowanie extends javax.swing.JFrame {
             }
         });
     }
+    
+    private void addKeyListenerTojo_jTFRejestracjaUsername(){
+        jo_jTFRejestracjaUsername.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                String temp = jo_jTFRejestracjaUsername.getText();
+                char ch = e.getKeyChar();
+                if(ch >= KeyEvent.VK_A && ch <= KeyEvent.VK_Z || ch >= 'a' && ch <= 'z' || ch == KeyEvent.VK_BACK_SPACE){
+                    if(temp.length() > 19){
+                        jo_jTFRejestracjaUsername.setEditable(false);
+                    }
+                }else{
+                    jo_jTFRejestracjaUsername.setEditable(false);
+                }
+                
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
+    }
+    
+    private void addKeyListenerTojo_jTFRejestracjaEmail(){
+        jo_jTFRejestracjaEmail.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                String temp = jo_jTFRejestracjaEmail.getText();
+                char ch = e.getKeyChar();
+                if(ch >= KeyEvent.VK_A && ch <= KeyEvent.VK_Z || ch >= 'a' && ch <= 'z' || ch >= '1' && ch <= '9' || ch == KeyEvent.VK_BACK_SPACE){
+                    if(temp.contains("@")){
+                        if((ch >= KeyEvent.VK_A && ch <= KeyEvent.VK_Z || ch >= 'a' && ch <= 'z' || ch == KeyEvent.VK_BACK_SPACE)){
+                            jo_jTFRejestracjaUsername.setEditable(true);
+                            if(temp.contains(".")){
+                                jo_jTFRejestracjaUsername.setEditable(true);
+                                if((ch >= KeyEvent.VK_A && ch <= KeyEvent.VK_Z || ch >= 'a' && ch <= 'z' || ch == KeyEvent.VK_BACK_SPACE)){
+                                    jo_jTFRejestracjaUsername.setEditable(true);
+
+                                }else{
+                                    jo_jTFRejestracjaUsername.setEditable(false);
+                                }
+                            }else{
+                                jo_jTFRejestracjaUsername.setEditable(false);
+                            }
+                        }else{
+                            jo_jTFRejestracjaUsername.setEditable(false);
+                        }
+                        jo_jTFRejestracjaUsername.setEditable(true);
+                    }else{
+                        jo_jTFRejestracjaUsername.setEditable(false);
+                    }
+                    jo_jTFRejestracjaUsername.setEditable(true);
+                }
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jo_jBRejestracjaWyczysc;
     private javax.swing.JButton jo_jBZaloguj;
     private javax.swing.JLabel jo_jLLogowanie;
     private javax.swing.JLabel jo_jLLogowanieEmail;
@@ -244,14 +345,15 @@ public class RejestracjaLogowanie extends javax.swing.JFrame {
     private javax.swing.JLabel jo_jLRejestracjaEmail;
     private javax.swing.JLabel jo_jLRejestracjaPassword;
     private javax.swing.JLabel jo_jLRejestracjaUsername;
+    private javax.swing.JPasswordField jo_jPFLogowaniePassword;
+    private javax.swing.JPasswordField jo_jPFRejestracjaConfirmPassword;
+    private javax.swing.JPasswordField jo_jPFRejestracjaPassword;
     private javax.swing.JPanel jo_jPLogowanie;
     private javax.swing.JPanel jo_jPRejestracja;
     private javax.swing.JTextField jo_jTFLogowanieEmail;
-    private javax.swing.JTextField jo_jTFLogowaniePassword;
-    private javax.swing.JTextField jo_jTFRejestracjaConfirmPassword;
     private javax.swing.JTextField jo_jTFRejestracjaEmail;
-    private javax.swing.JTextField jo_jTFRejestracjaPassword;
     private javax.swing.JTextField jo_jTFRejestracjaUsername;
     private javax.swing.JTabbedPane jo_jTPMain;
+    private javax.swing.JButton jojBRejestracja;
     // End of variables declaration//GEN-END:variables
 }

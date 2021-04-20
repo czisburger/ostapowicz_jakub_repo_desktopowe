@@ -29,7 +29,7 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jo_jTPMain" min="-2" pref="241" max="-2" attributes="0"/>
+              <Component id="jo_jTPMain" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -65,14 +65,19 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jo_jLLogowanie" alignment="0" min="-2" pref="78" max="-2" attributes="0"/>
-                          <Component id="jo_jLLogowanieEmail" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jo_jTFLogowanieEmail" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
-                          <Component id="jo_jTFLogowaniePassword" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
-                          <Component id="jo_jLLogowaniePassword" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jo_jBZaloguj" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jo_jLLogowanie" alignment="0" min="-2" pref="78" max="-2" attributes="0"/>
+                                  <Component id="jo_jLLogowanieEmail" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jo_jTFLogowanieEmail" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
+                                  <Component id="jo_jLLogowaniePassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jo_jBZaloguj" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jo_jPFLogowaniePassword" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -88,7 +93,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jo_jLLogowaniePassword" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jo_jTFLogowaniePassword" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="jo_jPFLogowaniePassword" min="-2" pref="25" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jo_jBZaloguj" min="-2" pref="23" max="-2" attributes="0"/>
                       <EmptySpace pref="137" max="32767" attributes="0"/>
@@ -121,17 +126,6 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jo_jTFLogowaniePassword">
-              <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder>
-                      <Color PropertyName="color" blue="cc" green="cc" red="cc" type="rgb"/>
-                    </LineBorder>
-                  </Border>
-                </Property>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="jo_jLLogowaniePassword">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Password"/>
@@ -143,6 +137,17 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Zaloguj"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="jo_jPFLogowaniePassword">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder>
+                      <Color PropertyName="color" blue="cc" green="cc" red="cc" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
               </Properties>
             </Component>
           </SubComponents>
@@ -167,29 +172,34 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jo_jPFRejestracjaPassword" max="32767" attributes="0"/>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                       <Component id="jo_jLRejestracjaEmail" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jo_jTFRejestracjaEmail" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
-                                      <Component id="jo_jTFRejestracjaPassword" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
                                       <Component id="jo_jLRejestracjaPassword" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                       <Component id="jo_jLRejestracjaUsername" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jo_jTFRejestracjaUsername" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                      <Component id="jo_jTFRejestracjaConfirmPassword" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
-                                      <Component id="jo_jLRejestracjaConfirmPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jo_jLRejestracjaConfirmPassword" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="264" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
+                          <Component id="jo_jPFRejestracjaConfirmPassword" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jo_jLRejestracja" min="-2" pref="78" max="-2" attributes="0"/>
-                                  <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jojBRejestracja" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jo_jBRejestracjaWyczysc" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
@@ -213,14 +223,17 @@
                       <Component id="jo_jTFRejestracjaEmail" min="-2" pref="25" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jo_jLRejestracjaPassword" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jo_jTFRejestracjaPassword" min="-2" pref="25" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                      <Component id="jo_jPFRejestracjaPassword" min="-2" pref="27" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jo_jLRejestracjaConfirmPassword" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jo_jTFRejestracjaConfirmPassword" min="-2" pref="25" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jo_jPFRejestracjaConfirmPassword" min="-2" pref="27" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jojBRejestracja" max="32767" attributes="0"/>
+                          <Component id="jo_jBRejestracjaWyczysc" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -241,17 +254,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="jo_jTFRejestracjaEmail">
-              <Properties>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder>
-                      <Color PropertyName="color" blue="cc" green="cc" red="cc" type="rgb"/>
-                    </LineBorder>
-                  </Border>
-                </Property>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JTextField" name="jo_jTFRejestracjaPassword">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -283,7 +285,20 @@
                 <Property name="text" type="java.lang.String" value="Username"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jo_jTFRejestracjaConfirmPassword">
+            <Component class="javax.swing.JLabel" name="jo_jLRejestracjaConfirmPassword">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Confirm Password"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="jojBRejestracja">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Rejestracja"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="jo_jPFRejestracjaPassword">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -294,18 +309,24 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jo_jLRejestracjaConfirmPassword">
+            <Component class="javax.swing.JPasswordField" name="jo_jPFRejestracjaConfirmPassword">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Confirm Password"/>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                    <LineBorder>
+                      <Color PropertyName="color" blue="cc" green="cc" red="cc" type="rgb"/>
+                    </LineBorder>
+                  </Border>
+                </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton1">
+            <Component class="javax.swing.JButton" name="jo_jBRejestracjaWyczysc">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Rejestracja"/>
+                <Property name="text" type="java.lang.String" value="Wyczy&#x15b;&#x107;"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jBRejestracjaWyczyscActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
