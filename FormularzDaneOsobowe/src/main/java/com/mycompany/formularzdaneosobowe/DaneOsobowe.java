@@ -5,6 +5,8 @@
  */
 package com.mycompany.formularzdaneosobowe;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.text.SimpleDateFormat;
 
 /**
@@ -18,6 +20,10 @@ public class DaneOsobowe extends javax.swing.JFrame {
      */
     public DaneOsobowe() {
         initComponents();
+        addKeyListenerTojTFLogin();
+        addKeyListenerTojTFEmail();
+        setLocationRelativeTo(null);
+        setResizable(false);
     }
 
     /**
@@ -151,8 +157,61 @@ public class DaneOsobowe extends javax.swing.JFrame {
         jTFEmail.setText("");
         jSFHeight.setValue(0);
         jSFWeight.setValue(0);
+        jDCDate.setCalendar(null);
     }//GEN-LAST:event_jBSaveActionPerformed
+    
+    private void addKeyListenerTojTFLogin(){
+        jTFLogin.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                String temp = jTFLogin.getText();
+                char ch = e.getKeyChar();
+                if(ch >= KeyEvent.VK_A && ch <= KeyEvent.VK_Z || ch >= 'a' && ch <= 'z' || ch == KeyEvent.VK_BACK_SPACE){
+                    jTFLogin.setEditable(true);
+                    if(temp.length() > 20){
+                        jTFLogin.setEditable(false);
+                    }
+                }else{
+                    jTFLogin.setEditable(false);
+                }
+            }
 
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
+    }
+    
+    private void addKeyListenerTojTFEmail(){
+        jTFEmail.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                char ch = e.getKeyChar();
+                if(ch >= KeyEvent.VK_A && ch <= KeyEvent.VK_Z || ch >= 'a' && ch <= 'z' || ch >= KeyEvent.VK_0 && ch <= KeyEvent.VK_9 || ch == KeyEvent.VK_BACK_SPACE || ch == KeyEvent.VK_AT || ch == KeyEvent.VK_PERIOD){
+                    jTFEmail.setEditable(true);
+                }else{
+                    jTFEmail.setEditable(false);
+                }
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
+    }
+    
     /**
      * @param args the command line arguments
      */
