@@ -3,6 +3,8 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="RejestracjaLogowanie"/>
+    <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -65,17 +67,17 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jo_jPFLogowaniePassword" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jo_jLLogowanie" alignment="0" min="-2" pref="78" max="-2" attributes="0"/>
                                   <Component id="jo_jLLogowanieEmail" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jo_jTFLogowanieEmail" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
                                   <Component id="jo_jLLogowaniePassword" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="jo_jBZaloguj" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="272" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jo_jPFLogowaniePassword" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jo_jTFLogowanieEmail" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -95,7 +97,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jo_jPFLogowaniePassword" min="-2" pref="25" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jo_jBZaloguj" min="-2" pref="23" max="-2" attributes="0"/>
+                      <Component id="jo_jBZaloguj" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="137" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -125,6 +127,9 @@
                   </Border>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jTFLogowanieEmailActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="jo_jLLogowaniePassword">
               <Properties>
@@ -138,6 +143,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Zaloguj"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jBZalogujActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JPasswordField" name="jo_jPFLogowaniePassword">
               <Properties>
@@ -176,14 +184,16 @@
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                      <Component id="jo_jLRejestracjaEmail" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jo_jTFRejestracjaEmail" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
-                                      <Component id="jo_jLRejestracjaPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jo_jLRejestracjaEmail" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jo_jLRejestracjaPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace min="-2" pref="304" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                      <Component id="jo_jLRejestracjaUsername" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jo_jTFRejestracjaUsername" alignment="0" min="-2" pref="350" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jo_jLRejestracjaUsername" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="302" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <Component id="jo_jLRejestracjaConfirmPassword" min="-2" max="-2" attributes="0"/>
@@ -193,16 +203,18 @@
                           </Group>
                           <Component id="jo_jPFRejestracjaConfirmPassword" alignment="0" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jo_jLRejestracja" min="-2" pref="78" max="-2" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jojBRejestracja" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jo_jBRejestracjaWyczysc" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="jojBRejestracja" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jo_jBRejestracjaWyczysc" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jo_jCBShowPassword" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jo_jTFRejestracjaUsername" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jo_jLRejestracja" min="-2" pref="78" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
+                          <Component id="jo_jTFRejestracjaEmail" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -232,7 +244,10 @@
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="jojBRejestracja" max="32767" attributes="0"/>
-                          <Component id="jo_jBRejestracjaWyczysc" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jo_jBRejestracjaWyczysc" alignment="3" max="32767" attributes="0"/>
+                              <Component id="jo_jCBShowPassword" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
@@ -297,6 +312,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Rejestracja"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jojBRejestracjaActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JPasswordField" name="jo_jPFRejestracjaPassword">
               <Properties>
@@ -326,6 +344,14 @@
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jBRejestracjaWyczyscActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="jo_jCBShowPassword">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Poka&#x17c; Has&#x142;o"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jo_jCBShowPasswordActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
